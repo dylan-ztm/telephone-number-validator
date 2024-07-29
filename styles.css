@@ -1,0 +1,151 @@
+/*
+* Copyright 2024, Dylan Cross
+*/
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+/*---------------------------------------------*/
+
+/* Custom Properties */
+:root {
+  --white:      #ffffff;
+  --black:      #000000;
+  --orange:     #f1be32;
+  --light-grey: #f0f1f3;
+  --dark-blue:  #13171f;
+  --dark-grey:  #3b3b4f;
+  --red:        #bf2731;
+
+  --text-color: var(--light-grey);
+  --background-color: var(--dark-grey);
+  --button-color:  var(--orange);
+  --alert-color:  var(--red);
+}
+/*---------------------------------------------*/
+
+/* Base Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin: 35px 0 24px;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+label {
+    padding: 20px 0 15px;
+    font-size: 1.1em;
+}
+
+input {
+    width: 77%;
+    height: 35px;
+    font-size: 1em;
+}
+
+footer {
+    padding-bottom: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.07 0 auto;
+}
+  
+.footer-text {
+    font-size: 0.7em;
+}
+
+.alert {
+    color: var(--alert-color);
+}
+
+/* Buttons */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background-color: var(--button-color);
+  color: var(--black);
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  padding: 7px;
+}
+/*---------------------------------------------*/
+
+/* Special Components */
+.app-container {
+    margin: 5px 0;
+    padding: 25px 15px;
+    width: 280px;
+    height: 450px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.user-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--light-grey);
+    color: var(--black);
+    margin-bottom: 10px;
+    width: 98%;
+    height: 360px;
+}
+
+.results-container {
+    margin: 10px 0 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.results-container p {
+    padding: 8px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.button-container {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
